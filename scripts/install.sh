@@ -5,7 +5,7 @@
 #   curl -sL https://git.io/vh4Gn | sh
 
 # Main repo address
-REPO=krom/docker-compose-makefile
+REPO=xtaje/docker-compose-makefile
 
 get_latest_release() {
   curl --silent "https://api.github.com/repos/$1/releases/latest" | # Get latest release from GitHub api
