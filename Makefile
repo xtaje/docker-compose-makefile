@@ -1,9 +1,6 @@
 OUT:=build/.mk-lib
 TAG?=$(shell git rev-parse --short HEAD)
 
-clean-release:
-	rm -f release.tgz
-
 release.tgz: src/* README.md LICENSE CHANGELOG.md samples/Makefile samples/Makefile.minimal.mk
 	@echo "Building release $(OUT)"
 	
@@ -26,3 +23,7 @@ release.tgz: src/* README.md LICENSE CHANGELOG.md samples/Makefile samples/Makef
 
 	# Clean up the build dir
 	rm -rf $(OUT)
+
+clean-release:
+	rm -f release.tgz
+
