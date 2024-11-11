@@ -8,7 +8,7 @@
 REPO=xtaje/docker-compose-makefile
 
 get_latest_release() {
-  curl -H" Accept: application/vnd.github+json" -H "X-GitHub-Api-Version: 2022-11-28" "https://api.github.com/repos/$REPO/releases/latest" | # Get latest release from GitHub api
+  curl -H "Accept: application/vnd.github+json" -H "X-GitHub-Api-Version: 2022-11-28" "https://api.github.com/repos/$REPO/releases/latest" | # Get latest release from GitHub api
     grep '"tag_name":' |                                            # Get tag line
     sed -E 's/.*"([^"]+)".*/\1/'                                    # Pluck JSON value
 }
